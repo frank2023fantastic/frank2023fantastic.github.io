@@ -1,18 +1,24 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
- <meta charset="UTF-8">  
- <title>Login</title>  
- <link rel="stylesheet" type="text/css" href="assets/css/Login.css"/>  
-</head>  
-<body>  
- <p id="login">  
- <h1>Login</h1>  
- <form method="post">  
- <input type="text" required="required" placeholder="Username" name="u"></input>  
- <input type="password" required="required" placeholder="Password" name="p"></input>  
- <button class="but" type="submit">Log In</button>  
- </form>  
- </p>  
-</body>  
-</html>
+<script type="text/javascript">   
+    function password() {   
+    var testV = 1;   
+    var pass1 = prompt('请输入密码:','');   
+    while (testV < 3) {   
+    if (!pass1)    
+    history.go(-1);   
+    if (pass1 == "123") {//设置密码
+    alert('口令正确，进行跳转');   
+    window.location.href="https://harry-w-potter.github.io/content.html";
+    break;   
+    }    
+    testV+=1;   
+    var pass1 =    
+    prompt('密码错误','');   
+    }   
+    if (pass1!="password" & testV ==3)    
+    history.go(-1);   
+    return " ";   
+    }    
+    document.write(password());   
+    </script>
+     
+    
