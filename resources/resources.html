@@ -1,49 +1,53 @@
-<SCRIPT language=JavaScript> 
- 
-    function password() { 
-     
-    var testV = 1; 
-     
-    var pass1 = prompt('Please Enter Password:',''); 
-     
-    while (testV < 3) { 
-     
-    if (!pass1) 
-     
-    history.go(-1); 
-     
-    if (pass1 == "resource2024") {      
-    alert('Correct Password!'); 
-     
-    break; 
-     
-    } 
-     
-    testV+=-1; 
-     
-    var pass1 = prompt('Wrong Password! Please Re-Enter:'); 
-     
-    } 
-     
-    if (pass1!="resource2024" & testV ==3) 
-     
-    history.go(-1); 
-     
-    return " "; 
-     
-    } 
-     
-    document.write(password()); 
-     
-    </SCRIPT>
+<!DOCTYPE html>
+<SCRIPT language=JavaScript>
+    function password(){
+      var testV=1;
+      var pass1=prompt('Please Enter Password:','');
+      while(testV<3){
+        if(!pass1) history.go(-1);
+        if(pass1=="resource2024"){
+          alert('Correct Password!');
+          break;
+        }
+        testV+=-1;
+        var pass1=prompt('Wrong Password! Please Re-Enter:');
+      }
+      if(pass1!="resource2024"&testV==3) history.go(-1);
+      return " ";
+    }
+      document.write(password());
+</SCRIPT>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/content.html">Content</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<link rel="stylesheet" href="assets/css/main.css" />
-<ul class="actions special">
-	<li><a href="chinese.html" class="button primary">chinese</a></li><br>
-	<li><a href="math.html" class="button primary">math</a></li><br>
-	<li><a href="english.html" class="button primary">english</a></li><br>
-	<li><a href="biology.html" class="button primary">biology</a></li><br>
-	<li><a href="chemistry.html" class="button primary">chemistry</a></li><br>
-	<li><a href="physics.html" class="button primary">physics</a></li>
-</ul>
+  <main>
+    <a href="/chinese.html"><button class="niceButton">Chinese</button></a><br>
+    <a href="/math.html"><button class="niceButton">Math</button></a><br>
+    <a href="/english.html"><button class="niceButton">English</button></a><br>
+    <a href="/biology.html"><button class="niceButton">Biology</button></a><br>
+    <a href="/chemistry.html"><button class="niceButton">Chemistry</button></a><br>
+    <a href="/physics.html"><button class="niceButton">Physics</button></a>
+  </main>
+
+  <footer>
+    &copy; 2024 Your Blog. All rights reserved.
+  </footer>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>
