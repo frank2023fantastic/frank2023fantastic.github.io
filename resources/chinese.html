@@ -1,41 +1,29 @@
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>中文页面</title>
-	<link rel="stylesheet" href="style.css">
+	<title>随机函数</title>
 </head>
 
 <body>
-	<header>
-		<h1>中文页面</h1>
-	</header>
+	<div id="random-content"></div>
+	<script>
+		// 生成一个随机数
+		function getRandomNumber() {
+			return Math.floor(Math.random() * 100);
+		}
 
-	<main>
-		<div id="markdown">
-			<script>
-				const markdown = document.getElementById("markdown");
-				try {
-					const content = await fetch("chinese.md").then(response => response.text());
-					markdown.innerHTML = marked(content);
-				} catch (error) {
-					console.error(error);
-					markdown.innerHTML = `<p>无法加载中文内容</p>`;
-				}
-			</script>
-		</div>
-	</main>
+		// 生成 HTML 内容
+		function generateHtmlContent(randomNumber) {
+			return `<h1>随机数：${randomNumber}</h1>`;
+		}
 
-	<footer>
-		<p>版权所有 &copy; 2023</p>
-	</footer>
-
+		// 将 HTML 内容插入到页面中
+		const randomContentElement = document.getElementById("random-content");
+		randomContentElement.innerHTML = generateHtmlContent(getRandomNumber());
+	</script>
 </body>
 
 </html>
