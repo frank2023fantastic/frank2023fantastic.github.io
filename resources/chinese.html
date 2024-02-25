@@ -5,12 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>随机函数</title>
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+		// 使用 CommonJS 规范引入 marked 库
+	</script>
 </head>
 
 <body>
 	<div id="random-content"></div>
-	<script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
 		// 将 HTML 内容插入到页面中
 		const randomContentElement = document.getElementById("random-content");
 		randomContentElement.innerHTML = generateHtmlContent(getRandomNumber());
@@ -21,6 +23,7 @@
 			.then(content => {
 				// 将 Markdown 内容转换为 HTML
 				const markdownContent = document.getElementById("markdown-content");
+				const marked = require('marked');
 				markdownContent.innerHTML = marked(content);
 			});
 
