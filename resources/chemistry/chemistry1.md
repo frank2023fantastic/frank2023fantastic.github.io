@@ -5,3 +5,5 @@ The video you shared titled "Introduction to Ionic Bonding and Covalent Bonding"
 2. Covalent Bonding: In covalent bonding, atoms share electrons to achieve a more stable electron configuration. This type of bond is formed between atoms with similar electronegativity. Covalent bonds can be either polar or nonpolar, depending on the distribution of electrons between the atoms.
 
 The video delves deeper into the concepts of ionic and covalent bonding, explaining their differences, properties, and examples. It provides a solid introduction to these fundamental concepts in chemistry. Enjoy expanding your knowledge of chemical bonding!
+
+This is the link: []()
