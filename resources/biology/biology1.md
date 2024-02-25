@@ -1,4 +1,4 @@
-![alt text](image-1.png)
+![alt text](../../images/image-1.png)
 
 In this video titled "12 Organ Systems | Roles & Functions | Easy Science Lesson," the presenter explores the roles and functions of the human body's 12 organ systems. Here's a brief summary:
 
@@ -17,4 +17,4 @@ In this video titled "12 Organ Systems | Roles & Functions | Easy Science Lesson
 
 This video provides a concise overview of each system's purpose and highlights their interconnectedness in maintaining our overall health. Enjoy learning about the fascinating human body! 
 
-This is the link: [https://www.youtube.com/watch?v=cQIU0yJ8RBg](https://www.youtube.com/watch?v=cQIU0yJ8RBg)
+ [This is the link:](https://www.youtube.com/watch?v=cQIU0yJ8RBg)
