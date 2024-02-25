@@ -1,7 +1,7 @@
 ## 中文<br>
 [人教版语文电子课本](chinese/chinese1.html) <br>
 [中小学教材电子版](chinese/chinese2.html) <br>
-[go back](resources2.html) 
+[返回](resources2.html) 
 <!-- # 中文测试
 
 ## 测试目标
