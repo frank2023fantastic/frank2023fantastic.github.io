@@ -9,3 +9,4 @@ The video you shared titled "Introduction to Ionic Bonding and Covalent Bonding"
 The video delves deeper into the concepts of ionic and covalent bonding, explaining their differences, properties, and examples. It provides a solid introduction to these fundamental concepts in chemistry. Enjoy expanding your knowledge of chemical bonding!
 
 This is the link: [https://www.youtube.com/watch?v=S_k0kr2eZSQ](https://www.youtube.com/watch?v=S_k0kr2eZSQ)
+[go back](../chemistry.html) 
