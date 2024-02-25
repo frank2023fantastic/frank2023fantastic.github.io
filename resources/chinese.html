@@ -13,22 +13,29 @@
 </head>
 
 <body>
-	<div id="markdown"></div>
-
-	<script>
-		const markdown = document.getElementById("markdown");
-		const content = await fetch("chinese.md").then(response => response.text());
-		markdown.innerHTML = marked(content);
-	</script>
-
 	<header>
 		<h1>中文页面</h1>
 	</header>
+
 	<main>
+		<div id="markdown">
+			<script>
+				const markdown = document.getElementById("markdown");
+				try {
+					const content = await fetch("chinese.md").then(response => response.text());
+					markdown.innerHTML = marked(content);
+				} catch (error) {
+					console.error(error);
+					markdown.innerHTML = `<p>无法加载中文内容</p>`;
+				}
+			</script>
+		</div>
 	</main>
+
 	<footer>
 		<p>版权所有 &copy; 2023</p>
 	</footer>
+
 </body>
 
 </html>
