@@ -24,7 +24,7 @@
 			.then(content => {
 				// 将 Markdown 内容转换为 HTML
 				const markdownContent = document.getElementById("markdown-content");
-				const marked = require('marked');
+				// const marked = require('marked');
 				markdownContent.innerHTML = marked(content);
 			})
 			.catch(error => {
