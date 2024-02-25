@@ -10,5 +10,5 @@
 5. 可以搜索古诗大全和歌词资源。<br>
 6. 提供下载链接和收藏功能。<br>
 
-这是链接：[http://www.dzkbw.com/books/rjb/yuwen/](http://www.dzkbw.com/books/rjb/yuwen/)
-[返回](../chinese1.md.html) 
+这是链接：[http://www.dzkbw.com/books/rjb/yuwen/](http://www.dzkbw.com/books/rjb/yuwen/)<br>
+[返回](../chinese.html) 
