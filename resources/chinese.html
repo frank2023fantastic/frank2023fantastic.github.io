@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>客户端解析 Markdown</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>客户端解析 Markdown</title>
 </head>
+
 <body>
-  <div id="markdown-content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    // 使用 fetch API 加载 Markdown 文件
-    fetch("chinese.md")
-      .then(response => response.text())
-      .then(content => {
-        // 将 Markdown 内容转换为 HTML
-        const markdownContent = document.getElementById("markdown-content");
-        markdownContent.innerHTML = marked(content);
-      });
-  </script>
+	<div id="markdown-content"></div>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script>
+		// 使用 fetch API 加载 Markdown 文件
+		fetch("https://harry-w-potter.github.io/resources/chinese.md")
+			.then(response => response.text())
+			.then(content => {
+				// 将 Markdown 内容转换为 HTML
+				const markdownContent = document.getElementById("markdown-content");
+				markdownContent.innerHTML = marked(content);
+			});
+	</script>
 </body>
+
 </html>
