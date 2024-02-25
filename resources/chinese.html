@@ -5,7 +5,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>随机函数</title>
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+		// 使用 fetch API 加载 Markdown 文件
+		fetch("chinese.md")
+			.then(response => response.text())
+			.then(content => {
+				// 将 Markdown 内容转换为 HTML
+				const markdownContent = document.getElementById("markdown-content");
+				markdownContent.innerHTML = marked(content);
+			});
+	</script>
 </head>
 
 <body>
@@ -26,16 +35,7 @@
 		randomContentElement.innerHTML = generateHtmlContent(getRandomNumber());
 	</script>
 
-	<script>
-		// 使用 fetch API 加载 Markdown 文件
-		fetch("chinese.md")
-			.then(response => response.text())
-			.then(content => {
-				// 将 Markdown 内容转换为 HTML
-				const markdownContent = document.getElementById("markdown-content");
-				markdownContent.innerHTML = marked(markdownContent);
-			});
-	</script>
+
 </body>
 
 </html>
