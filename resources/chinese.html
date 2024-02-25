@@ -22,10 +22,6 @@
 		fetch("chinese.md")
 			.then(response => response.text())
 			.then(content => {
-				// 将 Markdown 内容转换为 HTML
-				// const markdownContent = document.getElementById("markdown-content");
-				// const marked = require('marked');
-				// markdownContent.innerHTML = marked.parse(content);
 				document.getElementById('random-content').innerHTML =
 					marked.parse(content);
 			})
