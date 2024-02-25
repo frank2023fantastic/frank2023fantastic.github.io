@@ -33,7 +33,7 @@
 			.then(content => {
 				// 将 Markdown 内容转换为 HTML
 				const markdownContent = document.getElementById("markdown-content");
-				markdownContent.innerHTML = marked(content);
+				markdownContent.innerHTML = marked(markdownContent);
 			});
 	</script>
 </body>
