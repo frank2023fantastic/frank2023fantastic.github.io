@@ -1,10 +1,39 @@
-<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<link rel="stylesheet" href="assets/css/main.css" />
-<ul class="actions special">
-	<li><a href="resources/chinese.md" class="button primary">chinese</a></li><br>
-	<li><a href="resources/math.md" class="button primary">math</a></li><br>
-	<li><a href="resources/english.md" class="button primary">english</a></li><br>
-	<li><a href="resources/biology.md" class="button primary">biology</a></li><br>
-	<li><a href="resources/chemistry.md" class="button primary">chemistry</a></li><br>
-	<li><a href="resources/physics.md" class="button primary">physics</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>随机函数</title>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+	<div id="random-content"></div>
+	<script>
+		// 生成随机数并显示
+		function generateRandomContent() {
+			const randomNumber = Math.floor(Math.random() * 100);
+			const htmlContent = `<h1>随机数：${randomNumber}</h1>`;
+			document.getElementById("random-content").innerHTML = htmlContent;
+		}
+
+		// 加载 Markdown 文件
+		fetch("english.md")
+			.then(response => response.text())
+			.then(content => {
+				document.getElementById('random-content').innerHTML =
+					marked.parse(content);
+			})
+			.catch(error => {
+				// 处理错误
+				console.error(error);
+				document.getElementById("random-content").innerHTML = `<p>加载 Markdown 文件失败！</p>`;
+			});
+
+		// 生成随机内容
+		generateRandomContent();
+	</script>
+</body>
+
+</html>

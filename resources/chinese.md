@@ -1,6 +1,6 @@
-中文<br>
-[人教版语文电子课本](dzkbw.com) <br>
-[中小学教材电子版](mypep.com.cn) <br>
+## 中文<br>
+[人教版语文电子课本](chinese/chinese1.md) <br>
+[中小学教材电子版](chinese/chinese2.md) <br>
 <!-- # 中文测试
 
 ## 测试目标
