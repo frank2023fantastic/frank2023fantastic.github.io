@@ -1,41 +1,15 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>随机函数</title>
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
 </head>
-
 <body>
-	<div id="random-content"></div>
-	<script>
-		// 生成随机数并显示
-		function generateRandomContent() {
-			const randomNumber = Math.floor(Math.random() * 100);
-			const htmlContent = `<h1>随机数：${randomNumber}</h1>`;
-			document.getElementById("random-content").innerHTML = htmlContent;
-		}
-
-		// 加载 Markdown 文件
-		fetch("chinese.md")
-			.then(response => response.text())
-			.then(content => {
-				// 将 Markdown 内容转换为 HTML
-				const markdownContent = document.getElementById("markdown-content");
-				// const marked = require('marked');
-				markdownContent.innerHTML = marked.parse(content);
-			})
-			.catch(error => {
-				// 处理错误
-				console.error(error);
-				document.getElementById("random-content").innerHTML = `<p>加载 Markdown 文件失败！</p>`;
-			});
-
-		// 生成随机内容
-		generateRandomContent();
-	</script>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked.parse('# Marked in browser\n\nRendered by **marked**.');
+  </script>
 </body>
-
 </html>
