@@ -11,13 +11,6 @@
 <body>
 	<div id="random-content"></div>
 	<script>
-		// 生成随机数并显示
-		function generateRandomContent() {
-			const randomNumber = Math.floor(Math.random() * 100);
-			const htmlContent = `<h1>随机数：${randomNumber}</h1>`;
-			document.getElementById("random-content").innerHTML = htmlContent;
-		}
-
 		// 加载 Markdown 文件
 		fetch("biology.md")
 			.then(response => response.text())
