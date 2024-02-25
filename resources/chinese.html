@@ -5,19 +5,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>随机函数</title>
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
-		// 使用 CommonJS 规范引入 marked 库
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
 	<div id="random-content"></div>
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
-		// 将 HTML 内容插入到页面中
-		const randomContentElement = document.getElementById("random-content");
-		randomContentElement.innerHTML = generateHtmlContent(getRandomNumber());
+	<script>
+		// 生成随机数并显示
+		function generateRandomContent() {
+			const randomNumber = Math.floor(Math.random() * 100);
+			const htmlContent = `<h1>随机数：${randomNumber}</h1>`;
+			document.getElementById("random-content").innerHTML = htmlContent;
+		}
 
-		// 使用 fetch API 加载 Markdown 文件
+		// 加载 Markdown 文件
 		fetch("chinese.md")
 			.then(response => response.text())
 			.then(content => {
@@ -25,18 +26,15 @@
 				const markdownContent = document.getElementById("markdown-content");
 				const marked = require('marked');
 				markdownContent.innerHTML = marked(content);
+			})
+			.catch(error => {
+				// 处理错误
+				console.error(error);
+				document.getElementById("random-content").innerHTML = `<p>加载 Markdown 文件失败！</p>`;
 			});
 
-		// 生成一个随机数
-		function getRandomNumber() {
-			return Math.floor(Math.random() * 100);
-		}
-
-		// 生成 HTML 内容
-		function generateHtmlContent(randomNumber) {
-			return `<h1>随机数：${randomNumber}</h1>`;
-		}
-
+		// 生成随机内容
+		generateRandomContent();
 	</script>
 </body>
 
