@@ -1,3 +1,5 @@
+![alt text](../../images/image.png)
+
 该页面提供了人教版电子教科书的导航。它允许用户根据学科、年级或版本找到课本。
 
 一些关键功能包括: <br>
@@ -7,3 +9,5 @@
 4. 可以选择不同地区版本,如苏州版、北京版、沪科版等。<br>
 5. 可以搜索古诗大全和歌词资源。<br>
 6. 提供下载链接和收藏功能。<br>
+
+这是链接：[http://www.dzkbw.com/books/rjb/yuwen/](http://www.dzkbw.com/books/rjb/yuwen/)
