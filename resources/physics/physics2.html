@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Physics</title>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+	<div id="random-content"></div>
+	<script>
+		// 加载 Markdown 文件
+		fetch("physics2.md")
+			.then(response => response.text())
+			.then(content => {
+				document.getElementById('random-content').innerHTML =
+					marked.parse(content);
+			})
+			.catch(error => {
+				// 处理错误
+				console.error(error);
+				document.getElementById("random-content").innerHTML = `<p>加载 Markdown 文件失败！</p>`;
+			});
+
+		// 生成随机内容
+		generateRandomContent();
+	</script>
+</body>
+
+</html>
