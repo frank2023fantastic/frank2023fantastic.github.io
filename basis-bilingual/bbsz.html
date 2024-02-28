@@ -33,7 +33,7 @@
 	<div id="random-content"></div>
 	<script>
 		// 加载 Markdown 文件
-		fetch("/month.md")
+		fetch("month.md")
 			.then(response => response.text())
 			.then(content => {
 				document.getElementById('random-content').innerHTML =
