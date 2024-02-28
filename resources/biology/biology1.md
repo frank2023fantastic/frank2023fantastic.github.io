@@ -18,4 +18,4 @@ In this video titled "12 Organ Systems | Roles & Functions | Easy Science Lesson
 This video provides a concise overview of each system's purpose and highlights their interconnectedness in maintaining our overall health. Enjoy learning about the fascinating human body! 
 
 This is the link: [https://www.youtube.com/watch?v=cQIU0yJ8RBg](https://www.youtube.com/watch?v=cQIU0yJ8RBg)<br>
-[go back](../biology.htmlbiology.html) 
+[go back](../biology.html) 

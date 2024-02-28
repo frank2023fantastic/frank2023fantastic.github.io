@@ -1,0 +1,53 @@
+<SCRIPT language=JavaScript>
+    function password(){
+        var testV=1;
+        var pass1=prompt('Please Enter Password:','');
+        while(testV<3){
+            if(!pass1) history.go(-1);
+            if(pass1=="bbsz2024"){
+                alert('Correct Password!');
+                break;
+            }
+            testV+=-1;
+            var pass1=prompt('Wrong Password! Please Re-Enter:');
+        }
+        if(pass1!="bbsz2024"&testV==3) history.go(-1);
+        return " ";
+    }
+    document.write(password());
+
+</SCRIPT>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biology</title>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+	<div id="random-content"></div>
+	<script>
+		// 加载 Markdown 文件
+		fetch("/month.md")
+			.then(response => response.text())
+			.then(content => {
+				document.getElementById('random-content').innerHTML =
+					marked.parse(content);
+			})
+			.catch(error => {
+				// 处理错误
+				console.error(error);
+				document.getElementById("random-content").innerHTML = `<p>加载 Markdown 文件失败！</p>`;
+			});
+
+		// 生成随机内容
+		generateRandomContent();
+	</script>
+</body>
+
+</html>
