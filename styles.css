@@ -38,7 +38,9 @@ main {
 }
 
 p {
-  
+  font-family: 'Arial black';
+  border: 1.5px solid black;
+  border-radius: 10px;
 }
 
 article {
