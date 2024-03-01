@@ -14,3 +14,35 @@ Due to limited space in the Grand Theatre, the registration is limited to 500 pa
 报名链接 Registration link：https://wj.qq.com/s2/14176754/0a75/
 
 
+
+Dear Parents of G6-G8 Students,
+亲爱的G6-G8家长们:
+
+We are excited to announce that our Middle School Basketball Season will start from March 04th.
+很高兴借此邮件通知您，本学年中学篮球校队将于3月4日正式启动！ 
+
+Coaches Mr. Daley and Mr. Marsala (Boys) and Mr. Penney and Mr. Koo (Girls) will hold “try-outs” for G6-G8 students on Monday 04 March (Boys) and Wednesday 06 March (Girls), please see further details below. More information will be shared by our coaches should any further try-outs be required.
+男队带队教练Bradley Daley老师和Jack Marsala老师将于3月4日（下周一），女队带队教练Mike Penney老师和Matthew Koo老师将于3月6日（下周三），开始面向G6-G8学生在校内开展中学篮球校队选拔，有意向参与的学生可见以下详细信息，在规定时间前往指定地点即可。如后续需增加选拔轮次将另行通知。
+
+Middle School Basketball Boys Try-outs 男队选拔信息
+Date日期: 2024.03.04 Monday 周一
+Time时间: 16:10-17:00
+Location地点: Roof Top顶楼体育场
+
+Middle School Basketball Girls Try-outs 女队选拔信息
+Date日期: 2024.03.06 Wednesday 周三
+Time时间: 16:10-17:00
+Location地点: Gymnasium 二楼体育馆
+
+Once the squad of students is confirmed, the school will notify parents regarding our training schedule and competitive International Schools League (ISL) fixtures. Consent forms will also be shared.
+成功选拔出队员组队后，学校将通知入选学生家长具体的训练日程，并发放校队承诺书等所需签署文件。
+
+Should you have any questions please contact our coaches Mr. Penney  (mike.penney-bbsz@basischina.com) and Mr. Koo (matthew.koo-bbsz@basischina.com) (Girls) and Mr. Daley  (bradley.daley-bbsz@basischina.com) and Mr. Marsala (jack.marsala-bbsz@basischina.com) (Boys).
+如有相关问题，女队请通过邮件联系Mike Penney老师 (mike.penney-bbsz@basischina.com) 和 Matthew Koo老师 (matthew.koo-bbsz@basischina.com)。男队请通过邮件联系Bradley Daley老师 (bradley.daley-bbsz@basischina.com) 和 Jack Marsala 老师 (jack.marsala-bbsz@basischina.com)。
+
+Yours in sport,
+祝好，
+
+Wayne Roland Butterworth
+Student Activities
+CLUB—BASIS BILINGUAL SCHOOL SHENZHEN
