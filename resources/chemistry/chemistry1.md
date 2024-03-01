@@ -1,5 +1,6 @@
 ![alt text](../../images/image-2.png)
 
+
 The video you shared titled "Introduction to Ionic Bonding and Covalent Bonding" provides an overview of these two types of chemical bonding. Here's a summary for you:
 
 1. Ionic Bonding: This type of bonding occurs between atoms with a significant difference in electronegativity. One atom donates electrons to another, resulting in the formation of positively and negatively charged ions. These ions are held together by electrostatic forces, creating an ionic bond.
