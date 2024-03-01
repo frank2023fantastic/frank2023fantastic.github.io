@@ -37,7 +37,7 @@ main {
   padding: 20px;
 }
 
-p {
+.text {
   font-family: 'Arial black';
   border: 1.5px solid black;
   border-radius: 10px;
@@ -63,7 +63,7 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-.niceButton{
+.niceButton {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -77,10 +77,10 @@ footer {
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
-.niceButton:hover{
+.niceButton:hover {
 background-color: #1795bb;
 }
-.niceButton:active{
+.niceButton:active {
   background-color: #1795bb;
   box-shadow: 0 5px #666;
   transform:translateY(4px);
