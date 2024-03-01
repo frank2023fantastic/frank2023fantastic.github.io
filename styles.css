@@ -45,6 +45,10 @@ main {
   text-align: justify;
 }
 
+.padding {
+  padding: 20px;
+}
+
 article {
   margin-bottom: 40px;
 }
