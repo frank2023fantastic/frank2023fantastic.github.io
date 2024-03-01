@@ -16,3 +16,34 @@
     }
     document.write(password());
 </SCRIPT>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biology</title>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body class="padding">
+	<div id="random-content"></div>
+	<script>
+		// 加载 Markdown 文件
+		fetch("question-and-answer.md")
+			.then(response => response.text())
+			.then(content => {
+				document.getElementById('random-content').innerHTML =
+					marked.parse(content);
+			})
+			.catch(error => {
+				// 处理错误
+				console.error(error);
+				document.getElementById("random-content").innerHTML = `<p>加载 Markdown 文件失败！</p>`;
+			});
+	</script>
+</body>
+
+</html>
