@@ -13,8 +13,7 @@ Due to limited space in the Grand Theatre, the registration is limited to 500 pa
 
 报名链接 Registration link：https://wj.qq.com/s2/14176754/0a75/
 
-
-
+## G6-G8 Middle School Basketball Team Tryout 中学G6-G8篮球校队选拔通知
 Dear Parents of G6-G8 Students,
 亲爱的G6-G8家长们:
 
