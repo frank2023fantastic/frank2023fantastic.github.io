@@ -12,6 +12,8 @@ With the topic of “How to Survive the ChatGPT Invasion?”, this lecture will 
 Due to limited space in the Grand Theatre, the registration is limited to 500 participants, on a first-come, first-served basis. Each student may attend with one parent. If you and the student would like to attend, please click the link below to complete registration before this Thursday, February 29. The system will close automatically when registration is full. If the registration is successful, the school will send a confirmation email to the contact email address you have provided in the link. Please make sure the information is filled in accurately.
 
 报名链接 Registration link：https://wj.qq.com/s2/14176754/0a75/
+<br>
+<br>
 
 ## G6-G8 Middle School Basketball Team Tryout 中学G6-G8篮球校队选拔通知
 Dear Parents of G6-G8 Students,
