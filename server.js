@@ -15,7 +15,7 @@ app.get('/getCount', (req, res) => {
 });
 
 // Serve the HTML file
-app.use(express.static('index.html'));
+app.use(express.static('index'));
 
 // Start the server
 app.listen(3000, () => {
