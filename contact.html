@@ -5,6 +5,39 @@
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
+	<template>
+		<div>
+		  <button @click="incrementCount" class="viewer-button">{{ viewerCount }}</button>
+		</div>
+	  </template>
+	  
+	  <script>
+	  export default {
+		data() {
+		  return {
+			viewerCount: 0,
+		  };
+		},
+		methods: {
+		  incrementCount() {
+			this.viewerCount++;
+		  },
+		},
+	  };
+	  </script>
+	  
+	  <style scoped>
+	  .viewer-button {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		border: none;
+		background-color: blue;
+		color: white;
+		padding: 10px;
+		font-size: 16px;
+	  }
+	  </style>
   <header>
     <h1>Your Blog</h1>
     <nav>
