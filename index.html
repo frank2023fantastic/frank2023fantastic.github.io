@@ -23,27 +23,34 @@
 		const countSpan = document.getElementById('count');
 		const incrementButton = document.getElementById('incrementButton');
   
-		let count = 0;
-  
 		// Function to update the count in the UI
-		const updateCount = () => {
+		const updateCount = (count) => {
 		  countSpan.textContent = count;
 		};
   
 		// Function to increment the count
 		const incrementCount = () => {
-		  count++;
-		  updateCount();
-  
-		  // Send a request to the server to increment the count
-		  fetch('/incrementCount');
+		  fetch('/incrementCount')
+			.then(() => fetch('/getCount'))
+			.then((response) => response.json())
+			.then((data) => {
+			  const count = data.count;
+			  updateCount(count);
+			})
+			.catch((error) => console.error(error));
 		};
   
 		// Attach event listener to the increment button
 		incrementButton.addEventListener('click', incrementCount);
   
 		// Initial count update
-		updateCount();
+		fetch('/getCount')
+		  .then((response) => response.json())
+		  .then((data) => {
+			const count = data.count;
+			updateCount(count);
+		  })
+		  .catch((error) => console.error(error));
 	  });
 	</script>
   <header>

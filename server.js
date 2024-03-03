@@ -9,8 +9,13 @@ app.use('/incrementCount', (req, res, next) => {
   next();
 });
 
+// Route to send the viewer count
+app.get('/getCount', (req, res) => {
+  res.json({ count: viewerCount });
+});
+
 // Serve the HTML file
-app.use(express.static('index.html'));
+app.use(express.static('public'));
 
 // Start the server
 app.listen(3000, () => {
