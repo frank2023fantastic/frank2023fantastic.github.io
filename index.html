@@ -14,41 +14,45 @@
   </style>
 </head>
 <body>
+	<h1>Viewer Count Example</h1>
+	<p>Number of viewers today: <span id="count"></span></p>
+	<button id="incrementButton">Increase Count</button>
+  
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-		  const countSpan = document.getElementById('count');
-		  const incrementButton = document.getElementById('incrementButton');
-	
-		  // Function to update the count in the UI
-		  const updateCount = (count) => {
-			countSpan.textContent = count;
-		  };
-	
-		  // Function to retrieve the count from the server
-		  const getCount = () => {
-			fetch('/getCount')
-			  .then((response) => response.json())
-			  .then((data) => {
-				const count = data.count;
-				updateCount(count);
-			  })
-			  .catch((error) => console.error(error));
-		  };
-	
-		  // Function to increment the count
-		  const incrementCount = () => {
-			fetch('/incrementCount')
-			  .then(() => getCount())
-			  .catch((error) => console.error(error));
-		  };
-	
-		  // Attach event listener to the increment button
-		  incrementButton.addEventListener('click', incrementCount);
-	
-		  // Initial count update
-		  getCount();
-		});
-	  </script>
+	  document.addEventListener('DOMContentLoaded', () => {
+		const countSpan = document.getElementById('count');
+		const incrementButton = document.getElementById('incrementButton');
+  
+		// Function to update the count in the UI
+		const updateCount = (count) => {
+		  countSpan.textContent = count;
+		};
+  
+		// Function to retrieve the count from the server
+		const getCount = () => {
+		  fetch('/getCount')
+			.then((response) => response.json())
+			.then((data) => {
+			  const count = data.count;
+			  updateCount(count);
+			})
+			.catch((error) => console.error(error));
+		};
+  
+		// Function to increment the count
+		const incrementCount = () => {
+		  fetch('/incrementCount')
+			.then(() => getCount())
+			.catch((error) => console.error(error));
+		};
+  
+		// Attach event listener to the increment button
+		incrementButton.addEventListener('click', incrementCount);
+  
+		// Initial count update
+		getCount();
+	  });
+	</script>
   <header>
     <h1>Your Blog</h1>
     <nav>
