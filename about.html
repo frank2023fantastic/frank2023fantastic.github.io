@@ -16,10 +16,11 @@
       </ul>
     </nav>
   </header>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
   <div id="app">{{ message }}</div>
   
-
+<script>
   const { createApp, ref } = Vue
 
   createApp({
@@ -30,9 +31,7 @@
       }
     }
   }).mount('#app')
-
-	</script>
-  
+</script>
 
   <main>
     <h2>About</h2>
