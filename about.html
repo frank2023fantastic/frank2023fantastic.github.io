@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>About</title>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+	<title>About</title>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>Your Blog</h1>
-    <nav>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/content.html">Content</a></li>
-      </ul>
-    </nav>
-  </header>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  
-  <div id="app">{{ message }}</div>
-  
-<script>
-  const { createApp, ref } = Vue
+	<header>
+		<h1>Your Blog</h1>
+		<nav>
+			<ul>
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/contact.html">Contact</a></li>
+				<li><a href="/content.html">Content</a></li>
+			</ul>
+		</nav>
+	</header>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-  createApp({
-    setup() {
-      const message = ref('Hello vue!')
-      return {
-        message
-      }
-    }
-  }).mount('#app')
-</script>
+	<div id="app">{{ message }}</div>
 
-  <main>
-    <h2>About</h2>
-    <p>This is the About page of your blog.</p>
-</main>
+	<script>
+		const { createApp, ref } = Vue
 
-  <footer>
-    &copy; 2024 Your Blog. All rights reserved.
-  </footer>
+		createApp({
+			setup() {
+				const message = ref('Hello vue!')
+				return {
+					message
+				}
+			}
+		}).mount('#app')
+	</script>
 
-  <script src="/scripts.js"></script>
+	<main>
+		<h2>About</h2>
+		<p>This is the About page of your blog.</p>
+	</main>
+
+	<footer>
+		&copy; 2024 Your Blog. All rights reserved.
+	</footer>
+
 </body>
+
 </html>
