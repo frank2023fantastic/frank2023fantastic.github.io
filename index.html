@@ -13,13 +13,23 @@
   </style>
 </head>
 <body>
-	<h1>Viewer Count Example</h1>
-	<p>Number of viewers today: <span id="count"></span></p>
-	<button id="incrementButton">Increase Count</button>
-	<button @click="count++">
-		viewers: {{ count }}
-	</button>
-	<!-- Import the JavaScript file using the script tag --
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script setup>
+		import { ref } from 'vue'
+		
+		const count = ref(0)
+		
+		function increment() {
+		  count.value++
+		}
+		</script>
+		
+		<template>
+		  <button @click="increment">
+			{{ count }}
+		  </button>
+		</template>
+	<!-- Import the JavaScript file using the script tag -->
 	//  document.addEventListener('DOMContentLoaded', () => {
 	//	const countSpan = document.getElementById('count');
 	//	const incrementButton = document.getElementById('incrementButton');
@@ -53,8 +63,8 @@
 		// Initial count update
 	//	getCount();
 	//  });
-	//</script>
-  <header>
+	</script>
+	<header>
     <h1>Your Blog</h1>
     <nav>
       <ul>
