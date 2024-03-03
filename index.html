@@ -14,9 +14,9 @@
   </style>
 </head>
 <body>
-    <div id="app">
-		<button @click="count++">
-		  Count is: {{ count }}
+	<div id="app">
+		<button @click="incrementCount">
+		  Viewers: {{ count }}
 		</button>
 	  </div>
 	
@@ -26,6 +26,11 @@
 		  el: '#app',
 		  data: {
 			count: 0
+		  },
+		  methods: {
+			incrementCount() {
+			  this.count++;
+			}
 		  }
 		});
 	  </script>
