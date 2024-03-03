@@ -28,10 +28,9 @@
 		  countSpan.textContent = count;
 		};
   
-		// Function to increment the count
-		const incrementCount = () => {
-		  fetch('/incrementCount')
-			.then(() => fetch('/getCount'))
+		// Function to retrieve the count from the server
+		const getCount = () => {
+		  fetch('/getCount')
 			.then((response) => response.json())
 			.then((data) => {
 			  const count = data.count;
@@ -40,17 +39,18 @@
 			.catch((error) => console.error(error));
 		};
   
+		// Function to increment the count
+		const incrementCount = () => {
+		  fetch('/incrementCount')
+			.then(() => getCount())
+			.catch((error) => console.error(error));
+		};
+  
 		// Attach event listener to the increment button
 		incrementButton.addEventListener('click', incrementCount);
   
 		// Initial count update
-		fetch('/getCount')
-		  .then((response) => response.json())
-		  .then((data) => {
-			const count = data.count;
-			updateCount(count);
-		  })
-		  .catch((error) => console.error(error));
+		getCount();
 	  });
 	</script>
   <header>
