@@ -12,10 +12,35 @@
 			right: 10px;
 			transform: translate(-100%, 0);
 		}
+      #chat-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 1000px;
+        height: 2000px;
+        border: none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
 	</style>
 </head>
 
 <body>
+	<button class = nicebutton>Toggle Chat</button>
+    <iframe
+      id="chat-widget"
+      src="https://chat18.aichatos.xyz/#/chat/1709894392374"
+      allow="camera *; microphone *"
+    ></iframe>
+
+    <script>
+      const toggleButton = document.getElementById('toggle-button');
+      const chatWidget = document.getElementById('chat-widget');
+
+      toggleButton.addEventListener('click', () => {
+        chatWidget.style.display = chatWidget.style.display === 'none' ? 'block' : 'none';
+      });
+    </script>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script async src="//waust.at/d.js"></script>
 	<script setup>
