@@ -12,35 +12,37 @@
 			right: 10px;
 			transform: translate(-100%, 0);
 		}
-      #chat-widget {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 1000px;
-        height: 2000px;
-        border: none;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      }
+		#chat-widget {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 1000px;
+			height: 2000px;
+			border: none;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
 
 	</style>
 </head>
 
 <body>
-	<button class = nicebutton>Toggle Chat</button>
-    <iframe
-      id="chat-widget"
-      src="https://chat18.aichatos.xyz/#/chat/1709894392374"
-      allow="camera *; microphone *"
-    ></iframe>
+	<button id="toggle-button">Toggle Chat</button>
+	<iframe
+		id="chat-widget"
+		src="https://chat18.aichatos.xyz/#/chat/1709894392374"
+		allow="camera *; microphone *"
+	></iframe>
 
-    <script>
-      const toggleButton = document.getElementById('toggle-button');
-      const chatWidget = document.getElementById('chat-widget');
+	<script>
+		const toggleButton = document.getElementById('toggle-button');
+		const chatWidget = document.getElementById('chat-widget');
 
-      toggleButton.addEventListener('click', () => {
-        chatWidget.style.display = chatWidget.style.display === 'none' ? 'block' : 'none';
-      });
-    </script>
+		toggleButton.addEventListener('click', () => {
+			chatWidget.style.display = chatWidget.style.display === 'none' ? 'block' : 'none';
+		});
+	</script>
+
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script async src="//waust.at/d.js"></script>
 	<script setup>
@@ -57,6 +59,7 @@
 			{{ count }}
 		</button>
 	</template>
+
 	<header>
 		<h1>Basis News</h1>
 		<nav>
@@ -76,12 +79,11 @@
 			<p class="text">
 				Looking for the latest updates on your community all in one place? Welcome to Basis News, your one-stop
 				information center for all the news and information you’ll need. We're dedicated to keeping you informed
-				on what's happening in Basis. Whether it's the latest school team election or a award ceremony, you'll
+				on what's happening in Basis. Whether it's the latest school team election or an award ceremony, you'll
 				find it here!
 				But we're more than just news. This site is also designed to be a helpful resource hub. Need to learn
-				information? Check out our list of recources in each subject! Hoping to get answers from hard questions?
-				Send your question onto the website for every one to help. And we'll listen in on your advices if you
-				Email us at. Resource.center.bg@outlook.com
+				information? Check out our list of resources in each subject! Hoping to get answers from hard questions?
+				Send your question to the website for everyone to help. And we'll listen to your advice if you email us at. Resource.center.bg@outlook.com
 				With our fast updates, you'll always be in the know about Basis. And we make it simple to get involved
 				too. So bookmark us today and stay connected to everything you need to know about Basis.
 			</p>
@@ -94,17 +96,17 @@
 				help beginners get started on their journey.</p>
 			<h3>1. Start with the basics</h3>
 			<p class="text">It's important to build a strong foundation of knowledge. Start by
-				checking our recource center. It have a vast amount of information about every subjects. You can also
-				add your own source up for others to learn by sending to our email.</p>
+				checking our resource center. It has a vast amount of information about every subject. You can also
+				add your own source for others to learn by sending it to our email.</</p>
 			<h3>2. Practice regularly</h3>
 			<p class="text">Consistency is key. Set aside dedicated time each day or week to practice and improve your
 				skills in school. Whether it's through hands-on projects, exercises, or studying, regular practice
 				will help you make steady progress.</p>
 			<h3>3. Seek guidance and resources</h3>
-			<p class="text">When you have a question about a thing that you don't know, feel free to ask the questions
+			<p class="text">When you have a question about something you don't know, feel free to ask the question
 				on our question and answer section. After you send it to our email, we can put it up for others to help
-				you answer. This could help you to get your answer to a question without a long time.
-					By following these tips, you'll be well on your way to mastering your subjects in school. Remember,
+				you answer. This could help you get your answer to a question without a long wait.
+				By following these tips, you'll be well on your way to mastering your subjects in school. Remember,
 				learning is a continuous journey, so stay curious, embrace challenges, and never stop exploring!
 			</p>
 		</article>
