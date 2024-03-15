@@ -1,23 +1,25 @@
 const express = require('express');
+const markdownIt = require('markdown-it');
+const fs = require('fs');
+
 const app = express();
+const port = 9999;
 
-let viewerCount = 0;
+const md = new markdownIt();
 
-// Middleware to increment the viewer count
-app.use('/incrementCount', (req, res, next) => {
-  viewerCount++;
-  next();
+app.get('/', (req, res) => {
+  // Read the Markdown file
+  fs.readFile('text.md', 'utf8', (err, data) => {
+    if (err) {
+      res.send('Error reading file');
+    } else {
+      // Convert Markdown to HTML
+      const html = md.render(data);
+      res.send(html);
+    }
+  });
 });
 
-// Route to send the viewer count
-app.get('/getCount', (req, res) => {
-  res.json({ count: viewerCount });
-});
-
-// Serve the HTML file
-app.use(express.static('index'));
-
-// Start the server
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
