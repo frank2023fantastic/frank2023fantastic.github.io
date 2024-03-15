@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="/styles.css">
     <title>Chatbox</title>
     <style>
         #chatbox {
@@ -24,17 +23,12 @@
         var conversation = [];
 
         function saveConversation() {
-            var timestamp = new Date().toISOString();
-            var filename = "conversation_" + timestamp + ".md";
-            var content = "# Conversation\n\n";
+            var filename = "test.md";
+            var content = "";
 
             for (var i = 0; i < conversation.length; i++) {
                 var message = conversation[i];
-                content += "**" + message.sender + "**: " + message.content + "\n\n";
-
-                if (message.response) {
-                    content += "**Assistant**: " + message.response + "\n\n";
-                }
+                content += message.sender + ": " + message.content + "\n";
             }
 
             var element = document.createElement("a");
@@ -77,14 +71,6 @@
 
         sendButton.addEventListener("click", function() {
             addUserMessage();
-
-            // Call a function or API to get the assistant's response
-            // For simplicity, let's assume the response is stored in a variable called 'response'
-            var response = "Assistant's response goes here";
-
-            addMessage("Assistant", response);
-            conversation.push({ sender: "Assistant", response: response });
-            scrollToBottom();
         });
 
         window.addEventListener("beforeunload", function() {
