@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
     <title>Chatbox</title>
     <style>
         #chatbox {
@@ -31,15 +32,30 @@
                 content += message.sender + ": " + message.content + "\n";
             }
 
-            var element = document.createElement("a");
-            element.href = "data:text/plain;charset=utf-8," + encodeURIComponent(content);
-            element.download = filename;
-            element.style.display = "none";
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "save_conversation.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    console.log("Conversation saved to " + filename);
+                }
+            };
+            xmlhttp.send("filename=" + filename + "&content=" + encodeURIComponent(content));
+        }
 
-            console.log("Conversation saved to " + filename);
+        function retrievePreviousQuestions() {
+            var filename = "test.md";
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "retrieve_questions.php?filename=" + filename, true);
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    var previousQuestions = this.responseText;
+                    chatbox.innerHTML = previousQuestions;
+                    scrollToBottom();
+                }
+            };
+            xmlhttp.send();
         }
 
         function addMessage(sender, content) {
@@ -55,6 +71,7 @@
                 conversation.push({ sender: "User", content: userInputValue });
                 userInput.value = "";
                 scrollToBottom();
+                saveConversation();
             }
         }
 
@@ -73,10 +90,8 @@
             addUserMessage();
         });
 
-        window.addEventListener("beforeunload", function() {
-            if (conversation.length > 0) {
-                saveConversation();
-            }
+        window.addEventListener("load", function() {
+            retrievePreviousQuestions();
         });
     </script>
 </body>
