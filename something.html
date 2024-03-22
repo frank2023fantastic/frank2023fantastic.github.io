@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+		function submitForm() {
+		  var author = document.getElementById("author").value;
+		  var title = document.getElementById("title").value;
+		  var content = document.getElementById("content").value;
+		  
+		  // Create a new blog post object
+		  var post = {
+			author: author,
+			title: title,
+			content: content
+		  };
+		  
+		  // Retrieve existing blog posts from local storage
+		  var existingPosts = localStorage.getItem("blogPosts");
+		  var posts = existingPosts ? JSON.parse(existingPosts) : [];
+		  
+		  // Add the new blog post to the array
+		  posts.push(post);
+		  
+		  // Save the updated blog posts array to local storage
+		  localStorage.setItem("blogPosts", JSON.stringify(posts));
+		  
+		  // Display a success message
+		  alert("Blog post submitted successfully!");
+		  
+		  // Clear the form inputs
+		  document.getElementById("author").value = "";
+		  document.getElementById("title").value = "";
+		  document.getElementById("content").value = "";
+		}
+	  </script>
 	<link rel="stylesheet" type="text/css" href="/styles.css">
     <title>Chatbox</title>
     <style>
@@ -14,8 +46,8 @@
 </head>
 <body>
 	<h1>Submit Your Blog Post</h1>
-  
-	<form action="submit_post.php" method="post">
+	
+	<form onsubmit="event.preventDefault(); submitForm();">
 	  <label for="author">Author:</label>
 	  <input type="text" id="author" name="author" required><br><br>
 	  
@@ -26,5 +58,6 @@
 	  <textarea id="content" name="content" rows="8" cols="50" required></textarea><br><br>
 	  
 	  <input type="submit" value="Submit">
+	</form>
 </body>
 </html>
