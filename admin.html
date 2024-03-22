@@ -4,26 +4,13 @@
         <script async src="//waust.at/d.js"></script>
 		<link rel="stylesheet" type="text/css" href="/styles.css">
    </head>
+   </body>
    <body>
-        <input type="password" placeholder="password">
-        <button onclick="protectpasscode()">CHECK</button>
-        <script>
-           function protectpasscode() {
-              const result = document.getElementById("tutorial").value;
-              let passcode = "frank-harry";
-              let space = '';
-              if (result == space) {
-                 alert("Type passcode")
-              } else {
-                 if (result == passcode) {
-                    document.write("Hello to the admin page!");
-                 } else {
-                    alert("Incorrect Password");
-                    location.reload();
-                 }
-              }
-           }
-        </script>
+    <input type="password" id="passwordInput" />
+    <button onclick="checkPassword()">Enter</button>
+
+    <div id="protectedContent" style="display: none;">
+        
       <h1>This is the <b>Admin</b> page!</h1>
       <script id="_waus8s">var _wau = _wau || []; _wau.push(["dynamic", "eodolpvxho", "s8s", "c4302bffffff", "small"]);</script>
 	  <script src="https://giscus.app/client.js"
@@ -40,6 +27,21 @@
         data-lang="en"
         crossorigin="anonymous"
         async>
-	</script>
-   </body>
+	  </script>
+    </div>
+
+    <script>
+        var secretCode = "frank-harry";
+
+        function checkPassword() {
+            var input = document.getElementById("passwordInput").value;
+
+            if (input === secretCode) {
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                alert("Wrong code");
+            }
+        }
+    </script>
+</body>
 </html>
