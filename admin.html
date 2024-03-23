@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html>
+   <head>
+        <script async src="//waust.at/d.js"></script>
+		<link rel="stylesheet" type="text/css" href="/styles.css">
+   </head>
+   </body>
+   <body>
+	<input type="password" id="passwordInput" />
+    <button onclick="checkPassword()">Enter</button>
 
-<head>
-	<script async src="//waust.at/d.js"></script>
-	<link rel="stylesheet" type="text/css" href="/styles.css">
-</head>
+    <div id="protectedContent" style="display: none;">
+        
+      <h1>This is the <b>Admin</b> page!</h1>
+      <script id="_waus8s">var _wau = _wau || []; _wau.push(["dynamic", "eodolpvxho", "s8s", "c4302bffffff", "small"]);</script>
+	  		<script src="https://giscus.app/client.js"
+        data-repo="frank2023fantastic/frank2023fantastic.github.io"
+        data-repo-id="R_kgDOLXrGaA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDOLXrGaM4CeJ48"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+		async>
+		 </script>
+    </div>
 
-<body>
-	<input type="password" placeholder="password">
-	<button onclick="protectpasscode()">CHECK</button>
-	<script>
-		var password = "tutorial";
-		(function passcodeprotect() {
-		   var passcode = prompt("Enter PassCode");
-		   while (passcode !== password) {
-			  alert("Incorrect PassCode");
-			  return passcodeprotect();
-		   }
-		}());
-		alert('Welcome To The TP..!');
-	 </script>
-	<h1>This is the <b>Admin</b> page!</h1>
-	<script
-		id="_waus8s">var _wau = _wau || []; _wau.push(["dynamic", "eodolpvxho", "s8s", "c4302bffffff", "small"]);</script>
-	<script src="https://giscus.app/client.js" data-repo="frank2023fantastic/frank2023fantastic.github.io"
-		data-repo-id="R_kgDOLXrGaA" data-category="Q&A" data-category-id="DIC_kwDOLXrGaM4CeJ48" data-mapping="url"
-		data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
-		data-theme="light" data-lang="en" crossorigin="anonymous" async>
-		</script>
+    <script>
+        var secretCode = "frank-harry";
+
+        function checkPassword() {
+            var input = document.getElementById("passwordInput").value;
+
+            if (input === secretCode) {
+                document.getElementById("protectedContent").style.display = "block";
+            } else {
+                alert("Wrong code");
+            }
+        }
+    </script>
 </body>
-
 </html>
