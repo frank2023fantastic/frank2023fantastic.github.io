@@ -5,41 +5,20 @@
 	<title>Basis News</title>
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 	<style>
-		#app {
-			position: fixed;
-			top: 10px;
-			right: 10px;
-			transform: translate(-100%, 0);
-		}
-		#chat-widget{
+		.chat-widget{
             top: 0;
             bottom: 0;
 			left: 0;
 			right: 0;
-            height: auto;
+            height: 100%;
             width: 100%;
 		}
-
 	</style>
 </head>
 
 <body>
-	<header>
-		<h1>Basis News</h1>
-		<nav>
-			<ul>
-				<li><a href="/index.html">Home</a></li>
-				<li><a href="/about.html">About</a></li>
-				<li><a href="/contact.html">Contact</a></li>
-				<li><a href="/content.html">Content</a></li>
-				<li><a href="/chatbox.html">Chatbox</a></li>
-				<li><a href="/admin.html">Admin</a></li>
-			</ul>
-		</nav>
-	</header>
-
 	<iframe
-		id="chat-widget"
+		class="chat-widget"
 		src="https://chat18.aichatos.xyz/#/chat/1709894392374"
 		allow="camera *; microphone *"
 	></iframe>
