@@ -23,7 +23,22 @@
 		</nav>
 	</header>
 	<py-script>
-		print("Hello, World!")
+		import random
+		random_number = random.randint(1, 100)
+		random_variable = "Random number:", random_number
+		i = 5
+		while i != 0:
+			y = input(int("guess a number([i], chances)"))
+			if y == random_variable:
+				print("you are correct!")
+				i = 0
+			if y >= random_variable:
+				print("too big, guess again!")
+			if y <= random_variable:
+				print("too small, guess again!")
+			if i == 0:
+				print("try again!")
+			i = i-1
 	</py-script>
 	<footer>
 		&copy; 2024 Resource Center. All rights reserved. <br>
